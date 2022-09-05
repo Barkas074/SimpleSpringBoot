@@ -22,7 +22,7 @@ public class PostsViewController {
     }
 
     @ResponseBody
-    @RequestMapping(path = "/post/{id}", method = RequestMethod.PUT)
+    @RequestMapping(path = "/post/{id}", method = RequestMethod.GET)
     public String single(@PathVariable("id") Long id) {
         return "Здесь будет страница поста №" + id;
     }

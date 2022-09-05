@@ -7,19 +7,19 @@ import java.util.*;
 
 @Service
 public class PostService {
-    private ArrayList<Post> posts = new ArrayList<>();
+    private List<Post> posts = new ArrayList<>();
 
     {
         for (int i = 0; i < 3; i++) {
-            posts.add(new Post("post " + i, new Date()));
+            posts.add(new Post((long) posts.size(), "post " + i, new Date()));
         }
     }
 
-    public ArrayList<Post> listAllPosts(){
+    public List<Post> listAllPosts(){
         return posts;
     }
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post((long) posts.size(), text, new Date()));
     }
 }
