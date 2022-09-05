@@ -7,11 +7,19 @@ import java.util.*;
 
 @Service
 public class PostService {
-    public ArrayList<Post> listAllPosts(){
-        ArrayList<Post> arrayList = new ArrayList<>();
-        for (int i = 0; i < 3; i++){
-            arrayList.add(new Post("post " + i, new Date()));
+    private ArrayList<Post> posts = new ArrayList<>();
+
+    {
+        for (int i = 0; i < 3; i++) {
+            posts.add(new Post("post " + i, new Date()));
         }
-        return arrayList;
+    }
+
+    public ArrayList<Post> listAllPosts(){
+        return posts;
+    }
+
+    public void create(String text) {
+        posts.add(new Post(text, new Date()));
     }
 }
