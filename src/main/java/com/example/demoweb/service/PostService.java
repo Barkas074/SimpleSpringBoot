@@ -10,7 +10,7 @@ public class PostService {
     public ArrayList<Post> listAllPosts(){
         ArrayList<Post> arrayList = new ArrayList<>();
         for (int i = 0; i < 3; i++){
-            arrayList.add(new Post("post " + i));
+            arrayList.add(new Post("post " + i, new Date()));
         }
         return arrayList;
     }
