@@ -1,6 +1,5 @@
 package com.example.demoweb.controller;
 
-import com.example.demoweb.model.Post;
 import com.example.demoweb.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
